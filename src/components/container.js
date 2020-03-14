@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios'
-import Card from './card'
+import ProjectCard from './ProjectCard'
 import { Link } from 'react-router-dom'
 
 const Container = () => {
@@ -19,7 +19,7 @@ const Container = () => {
   return (
     <div>
       {data.map(project => (
-        <Link to={`/${project.id}`} key={project.id}><Card project={project} /></Link>
+        <Link to={`/${project.id}`} key={project.id}><ProjectCard project={project} /></Link>
       ))}
     </div>
   );

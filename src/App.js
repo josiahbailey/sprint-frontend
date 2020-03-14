@@ -1,6 +1,6 @@
 import React from 'react';
-import Container from './components/container'
-import Page from './components/Page'
+import Container from './components/Container'
+import Page from './components/ProjectPage'
 import { Route } from 'react-router-dom'
 
 function App() {
