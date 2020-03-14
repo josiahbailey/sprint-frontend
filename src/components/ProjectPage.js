@@ -23,7 +23,7 @@ const Page = () => {
     <div>
       <Link to={`/projects/${id}/new-action`}><button>Add Actions</button></Link>
       <button>Toggle Project Completed</button>
-      <Link to={``}><button>Update Project</button></Link>
+      <Link to={`/projects/${id}/update`}><button>Update Project</button></Link>
       <button>Remove Project</button>
       <h1>Completed: {completed ? 'true' : 'false'}</h1>
       <h2>{name}</h2>
@@ -36,7 +36,7 @@ const Page = () => {
           return <Link to={`/projects/${id}/actions/${action.id}`}><ActionCard action={action} /></Link>
         }
       }) : ''}
-      <Link to='/'>Back</Link>
+      <Link to='/projects'>Back</Link>
     </div>
   );
 }

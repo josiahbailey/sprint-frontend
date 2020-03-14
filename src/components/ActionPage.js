@@ -27,7 +27,7 @@ const ActionPage = () => {
       <h1>Completed: {completed ? 'true' : 'false'}</h1>
       <h2>{description}</h2>
       <h3>{notes}</h3>
-      <Link to={`/${id}`}>Back</Link>
+      <Link to={`/projects/${id}`}>Back</Link>
     </div>
   );
 }

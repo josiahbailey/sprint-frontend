@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route } from 'react-router-dom'
+import { Route, Link } from 'react-router-dom'
 
 import Container from './components/Container'
 import ProjectPage from './components/ProjectPage'
@@ -13,6 +13,12 @@ function App() {
     <div className="App">
       <Header />
 
+      <Route exact path='/' >
+        <h1>Welcome to Project Builder!</h1>
+        <h2>Try creating a project</h2>
+        <Link to='/projects'>Projects</Link>
+      </Route>
+
       <Route exact path='/projects' component={Container} />
 
       <Route exact path='/projects/:id' component={ProjectPage} />
@@ -23,7 +29,7 @@ function App() {
 
       <Route exact path='/projects/:id/update' component={ProjectForm} />
 
-      <Route exact path='/projecets/:id/new-action' component={ActionForm} />
+      <Route exact path='/projects/:id/new-action' component={ActionForm} />
 
       <Route exact path='/projects/:id/actions/:idtwo/update' component={ActionForm} />
     </div>
