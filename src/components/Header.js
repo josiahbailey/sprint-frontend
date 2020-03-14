@@ -1,10 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 
 const Header = () => {
   return (
     <div>
-      <button>Home</button>
-      <button>Add Projects</button>
+      <Link to='/projects'><button>Home</button></Link>
+      <Link to='/new-project'><button>Add Projects</button></Link>
     </div>
   );
 }

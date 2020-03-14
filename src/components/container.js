@@ -19,7 +19,7 @@ const Container = () => {
   return (
     <div>
       {data.map(project => (
-        <Link to={`/${project.id}`} key={project.id}><ProjectCard project={project} /></Link>
+        <Link to={`/projects/${project.id}`} key={project.id}><ProjectCard project={project} /></Link>
       ))}
     </div>
   );

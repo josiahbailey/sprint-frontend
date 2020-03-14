@@ -22,7 +22,7 @@ const ActionPage = () => {
   return (
     <div>
       <button>Toggle Action Completed</button>
-      <button>Update Action </button>
+      <Link to={`/projects/${id}/actions/${idtwo}/update`}><button>Update Action </button></Link>
       <button>Remove Action</button>
       <h1>Completed: {completed ? 'true' : 'false'}</h1>
       <h2>{description}</h2>

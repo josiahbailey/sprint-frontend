@@ -21,9 +21,9 @@ const Page = () => {
 
   return (
     <div>
-      <button>Add Actions</button>
+      <Link to={`/projects/${id}/new-action`}><button>Add Actions</button></Link>
       <button>Toggle Project Completed</button>
-      <button>Update Project</button>
+      <Link to={``}><button>Update Project</button></Link>
       <button>Remove Project</button>
       <h1>Completed: {completed ? 'true' : 'false'}</h1>
       <h2>{name}</h2>
@@ -33,7 +33,7 @@ const Page = () => {
         if (action.completed === true) {
           return ''
         } else {
-          return <Link to={`/${id}/actions/${action.id}`}><ActionCard action={action} /></Link>
+          return <Link to={`/projects/${id}/actions/${action.id}`}><ActionCard action={action} /></Link>
         }
       }) : ''}
       <Link to='/'>Back</Link>
