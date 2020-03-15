@@ -16,7 +16,7 @@ function App() {
       <Route exact path='/' >
         <h1>Welcome to Project Builder!</h1>
         <h2>Try creating a project</h2>
-        <Link to='/projects'>Projects</Link>
+        <Link to='/projects'><button>Projects</button></Link>
       </Route>
 
       <Route exact path='/projects' component={Container} />
