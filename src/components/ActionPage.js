@@ -31,6 +31,23 @@ const ActionPage = () => {
       })
   }
 
+  // const complete = () => {
+  //   setAction({
+  //     ...action,
+  //     completed: completed ? 0 : 1
+  //   })
+  // }
+
+  // const toggleComplete = e => {
+  //   axios.put(`http://localhost:4000/api/actions/${idtwo}`, complete())
+  //     .then(res => {
+  //       console.log(res)
+  //     })
+  //     .catch(err => {
+  //       console.log(err)
+  //     })
+  // }
+
   return (
     <div>
       <button>Toggle Action Completed</button>
