@@ -31,26 +31,20 @@ const ActionPage = () => {
       })
   }
 
-  // const complete = () => {
-  //   setAction({
-  //     ...action,
-  //     completed: completed ? 0 : 1
-  //   })
-  // }
-
-  // const toggleComplete = e => {
-  //   axios.put(`http://localhost:4000/api/actions/${idtwo}`, complete())
-  //     .then(res => {
-  //       console.log(res)
-  //     })
-  //     .catch(err => {
-  //       console.log(err)
-  //     })
-  // }
+  const toggleComplete = e => {
+    axios.put(`http://localhost:4000/api/actions/${idtwo}`, { ...action, completed: !completed })
+      .then(res => {
+        console.log(res)
+        setAction(res.data.action)
+      })
+      .catch(err => {
+        console.log(err)
+      })
+  }
 
   return (
     <div>
-      <button>Toggle Action Completed</button>
+      <button onClick={toggleComplete}>Toggle Action Completed</button>
       <Link to={`/projects/${id}/actions/${idtwo}/update`}><button>Update Action </button></Link>
       <button onClick={handleDelete}>Remove Action</button>
       <h1>Completed: {completed ? 'true' : 'false'}</h1>
